@@ -60,7 +60,7 @@ void main_loop(void)
 		cli_secure_boot_cmd(s);
 
 
-	env_set("sdboot", "echo Importing environment from SD... && mmcinfo && load mmc 0 0x2000000 uEnv.txt && env import -t 0x2000000 ${filesize} && boot");
+	env_set("sdboot", "echo Running script from SD... && mmcinfo && fatload mmc 0 0x2000000 u-boot.scr && source 0x2000000");
 
 	autoboot_command(s);
 

@@ -22,7 +22,7 @@
 	};
 
 	chosen {
-		bootargs = "";
+		bootargs = "earlyprintk";
 		stdout-path = "serial0:115200n8";
 	};
 
